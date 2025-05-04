@@ -209,11 +209,14 @@ int builtin_help(char **args) {
         for (int i = 0; builtins[i].name != NULL; i++) {
             if (strcmp(args[1], builtins[i].name) == 0) {
                 printf("%s: %s\n", builtins[i].name, builtins[i].help);
+                return 1;
             }
+        }
+        for (int i = 0; others[i].name != NULL; i++) {
             if (strcmp(args[1], others[i].name) == 0) {
                 printf("%s: %s\n", others[i].name, others[i].help);
+                return 1;
             }
-            return 0;
         }
         fprintf(stderr, "help: no help for %s\n", args[1]);
         return 1;
