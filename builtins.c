@@ -201,7 +201,7 @@ int builtin_help(char **args) {
         for (int i = 0; builtins[i].name != NULL; i++) {
             printf("  %-10s %s\n", builtins[i].name, builtins[i].help);
         }
-        for (int j = 0; others[i].name != NULL; i++) {
+        for (int i = 0; others[i].name != NULL; i++) {
             printf("  %-10s %s\n", others[i].name, others[i].help);
         }
     } else {
