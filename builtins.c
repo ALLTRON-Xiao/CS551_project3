@@ -32,6 +32,8 @@ static builtin_t others[] = {
     {"bg", builtin_export, "Resume job in background"},
     {"kill", builtin_unset, "Send signal to jobs/processes"},
     {"history", builtin_exit, "Display command history"},
+    {NULL, NULL, NULL},
+    {NULL, NULL, NULL}
 };
 
 // Execute a built-in command if the command matches one
